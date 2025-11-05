@@ -16,7 +16,7 @@ export default function App() {
 
   const obtenerUsuarios = async () => {
     try {
-      const res = await fetch("https://5q8m79-3001.csb.app/users");
+      const res = await fetch("http://node-app:3001/users");
       const data = await res.json();
       setUsuarios(data);
     } catch (error) {
@@ -32,7 +32,7 @@ export default function App() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://5q8m79-3001.csb.app/register", {
+      const res = await fetch("http://node-app:3001/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
