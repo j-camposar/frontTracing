@@ -28,5 +28,5 @@ jobs:
     # 3️⃣ Construir y subir imagen Docker
     - name: Build and push Docker image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:latest
+        docker build -t $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:latest .
         docker push $DOCKERHUB_USERNAME/$DOCKERHUB_REPO:latest
